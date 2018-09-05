@@ -1,0 +1,19 @@
+{
+    "configurations": [
+        {
+            "defines": [
+                "__AVR_ATtiny13A__"
+            ],
+            "name": "Linux",
+            "includePath": [
+                "~/.arduino15/packages/diy_attiny/hardware/avr/2018.3.11/**",
+                "~/.arduino15/packages/arduino/tools/avr-gcc/4.9.2-atmel3.5.4-arduino2/avr/include/**"
+            ],
+            "intelliSenseMode": "clang-x64",
+            "compilerPath": "/usr/bin/clang",
+            "cStandard": "c11",
+            "cppStandard": "c++17"
+        }
+    ],
+    "version": 4
+}
