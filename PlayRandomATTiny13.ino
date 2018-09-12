@@ -7,14 +7,14 @@ DFPlayerMini player;
 
 void setup(void)
 {
-	pinMode(PB2, OUTPUT); // Gives power to the mp3 module
-	pinMode(PB1, INPUT);  // Read mp3: On when idle, off when playing
+	pinMode(PB1, OUTPUT); // Gives power to the mp3 module
+	pinMode(PB2, INPUT);  // Read mp3: On when idle, off when playing
 
-	digitalWrite(PB2, HIGH); // Power on mp3
+	digitalWrite(PB1, HIGH); // Power on mp3
 	reset();
 	play();
 	waitForIdle();
-	digitalWrite(PB2, LOW); // Cut down the module power
+	digitalWrite(PB1, LOW); // Cut down the module power
 
 	set_sleep_mode(SLEEP_MODE_PWR_DOWN); // Power down, only wake up by reset
 }
@@ -32,8 +32,8 @@ void play()
 	delay(100);
 	player.sendCommand(NEXT_COMMAND); // But first track is NEVER random so play next
 	delay(100);
-	player.sendCommand(VOLUME_COMMAND, 28); // Set the volume back on
-	delay(100);							// Wait a little bit just in case
+	player.sendCommand(VOLUME_COMMAND, 30); // Set the volume back on
+	delay(100);								// Wait a little bit just in case
 }
 
 void reset()
@@ -57,7 +57,7 @@ void waitForIdle()
 	bool isFinished = false;
 	do
 	{
-		isFinished = digitalRead(PB1);
+		isFinished = digitalRead(PB2);
 		delay(100);
 	} while (!isFinished); // Wait for the track to end
 	delay(500);
