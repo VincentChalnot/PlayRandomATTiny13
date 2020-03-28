@@ -10,7 +10,7 @@
 #define	UART_TX_ENABLED		(1) // Enable UART TX
 
 #ifndef F_CPU
-# define        F_CPU           (1200000UL) // 128 KHz
+# define        F_CPU           (1200000UL) // 1.2MHz
 #endif  /* !F_CPU */
 
 #if defined(UART_TX_ENABLED) && !defined(UART_TX)

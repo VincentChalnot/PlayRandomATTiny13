@@ -12,20 +12,28 @@
 
 #define NEXT_COMMAND 0x01
 #define PREVIOUS_COMMAND 0x02
-#define PLAY_COMMAND 0x03
+#define PLAY_TRACK_COMMAND 0x03
 #define INCREASE_VOLUME_COMMAND 0x04
 #define DECREASE_VOLUME_COMMAND 0x05
-#define VOLUME_COMMAND 0x06
-#define EQ_COMMAND 0x07
-#define PLAYBACK_COMMAND 0x08
+#define SET_VOLUME_COMMAND 0x06
+#define SET_EQ_COMMAND 0x07
+#define SET_PLAYBACK_MODE_COMMAND 0x08
+#define SET_VOLUME_ADJUST_COMMAND 0x06
 #define STANDBY_COMMAND 0x0A
-#define WAKEUP_COMMAND 0x0A
+#define WAKEUP_COMMAND 0x0B
 #define RESET_COMMAND 0x0C
 #define PLAYBACK_COMMAND 0x0D
 #define PAUSE_COMMAND 0x0E
 #define RANDOM_TRACK_COMMAND 0x18
 
-#define STATUS_QUERY 0x43
+#define REPLY_QUERY 0x41
+#define STATUS_QUERY 0x42
+#define CURRENT_VOLUME_QUERY 0x43
+#define CURRENT_EQ_QUERY 0x44
+#define CURRENT_PLAYBACK_MODE_QUERY 0x45
+#define TF_CARD_NUMBER_FILES_QUERY 0x47
+#define U_DISK_NUMBER_FILES_QUERY 0x48
+#define FLASH_NUMBER_FILES_QUERY 0x49
 
 #define PLAYBACK_REPEAT 0
 #define PLAYBACK_FOLDER_REPEAT 1
@@ -49,7 +57,7 @@ public:
   uint8_t checksumLSB = 0;
 
   void findChecksum();
-  void sendCommand(uint8_t command, uint16_t parameter = 0);
+  void sendCommand(uint8_t command, uint16_t parameter = (uint16_t) 0U);
   void sendData();
 };
 

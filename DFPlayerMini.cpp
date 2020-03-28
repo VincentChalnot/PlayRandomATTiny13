@@ -1,5 +1,5 @@
 #include "DFPlayerMini.h"
-#include "uart.h";
+#include "uart.h"
 
 void DFPlayerMini::findChecksum()
 {
@@ -11,7 +11,7 @@ void DFPlayerMini::findChecksum()
   return;
 }
 
-void DFPlayerMini::sendCommand(uint8_t command, uint16_t parameter = 0)
+void DFPlayerMini::sendCommand(uint8_t command, uint16_t parameter = (uint16_t) 0U)
 {
   commandValue = command;
   paramMSB = (uint8_t) (parameter >> 8);

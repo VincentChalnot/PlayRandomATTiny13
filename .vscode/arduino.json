@@ -2,5 +2,6 @@
     "sketch": "PlayRandomATTiny13.ino",
     "board": "diy_attiny:avr:attiny13_diy",
     "configuration": "boot=none,clock=1_2MHz,core=MillisCore,millis_ppm=1p6,print=BinHexDec,serial=HalfDuplexRW,lto=enable,bodlevel=2v7",
-    "port": "/dev/ttyUSB0"
+    "port": "COM14",
+    "programmer": "Arduino as ISP"
 }

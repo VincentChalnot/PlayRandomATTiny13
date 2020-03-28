@@ -2,7 +2,7 @@
     "configurations": [
         {
             "defines": [
-                "__AVR_ATtiny13A__"
+                "__AVR_ATtiny13__"
             ],
             "name": "Linux",
             "includePath": [
@@ -13,6 +13,22 @@
             "compilerPath": "/usr/bin/clang",
             "cStandard": "c11",
             "cppStandard": "c++17"
+        },
+        {
+            "defines": [
+                "__AVR_ATtiny13__"
+            ],
+            "name": "Win32",
+            "includePath": [
+                "C:\\Users\\Vincent\\AppData\\Local\\Arduino15\\packages\\diy_attiny\\hardware\\avr\\2018.3.11\\**",
+                "C:\\Users\\Vincent\\AppData\\Local\\Arduino15\\packages\\arduino\\tools\\**",
+                "C:\\Users\\Vincent\\AppData\\Local\\Arduino15\\packages\\arduino\\hardware\\avr\\1.6.21\\**"
+            ],
+            "intelliSenseMode": "clang-x64",
+            "compilerPath": "/usr/bin/clang",
+            "cStandard": "c11",
+            "cppStandard": "c++17",
+            "forcedInclude": []
         }
     ],
     "version": 4
